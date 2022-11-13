@@ -4,9 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Calculator Project</title>
   </head>
   <body>
+    <heading class="title">Calculator</heading>
+    <div class="display">1234</div>
+    <div class="calculator-body">
+      <div class="calc-button" id="seven" onclick="displaySeven()">7</div>
+      <div class="calc-button" id="eight" onclick="displayEight()">8</div>
+      <div class="calc-button" id="nine" onclick="displayNine()">9</div>
+      <div class="calc-button operator" id="+" onclick="displayPlus()">+</div>
+      <div class="calc-button" id="four" onclick="displayFour()">4</div>
+      <div class="calc-button" id="five" onclick="displayFive()">5</div>
+      <div class="calc-button" id="six" onclick="displaySix()">6</div>
+      <div class="calc-button operator" id="-" onclick="displayMinus()">-</div>
+      <div class="calc-button" id="one" onclick="displayOne()">1</div>
+      <div class="calc-button" id="two" onclick="displayTwo()">2</div>
+      <div class="calc-button" id="three" onclick="displayThree()">3</div>
+      <div class="calc-button operator" id="*" onclick="displayMultiply()">
+        *
+      </div>
+      <div class="calc-button" id="clear" onclick="displayClear()">C</div>
+      <div class="calc-button" id="0" onclick="displayZero()">0</div>
+      <div class="calc-button operator" id="=">=</div>
+      <div class="calc-button operator" id="/" onclick="displayDivide()">/</div>
+    </div>
+
     <script src="scripts.js" ;></script>
   </body>
 </html>
