@@ -1,3 +1,34 @@
+let currentNum = "";
+let previousNum = "";
+let operator = "";
+
+const currentDisplay = document.querySelector(".current");
+const previousDisplay = document.querySelector(".previous");
+const clear = document.querySelector(".clear-btn");
+const equals = document.querySelector(".equals");
+const numbers = document.querySelectorAll(".calc-btn");
+const operators = document.querySelectorAll(".operator");
+//functions to display numbers clicked in display
+//WILL ADD SOMETHING TO STORE NUMBER VALUE!!!!
+
+numbers.forEach((number) =>
+  number.addEventListener("click", function (e) {
+    handleNumber(e.target.textContent);
+    currentDisplay.textContent = currentNum;
+  })
+);
+
+function handleNumber(num) {
+  if (currentNum.length < 10) {
+    currentNum += num;
+  }
+}
+
+clear.addEventListener("click", function (e) {
+  currentDisplay.textContent = "";
+  currentNum = "";
+});
+
 //functions for basic arithmetic
 function add(a, b) {
   if (typeof a != "number" || typeof b != "number") {
@@ -37,63 +68,3 @@ function operate(num1, operator, num2) {
     return divide(num1, num2);
   } else return "Operator Error";
 }
-
-//console.log(operate("-", 0, 3));
-
-const display = document.querySelector(".display");
-
-// const one = document.getElementById("one");
-// const two = document.getElementById("two");
-
-let displayValue;
-//functions to display numbers clicked in display
-//WILL ADD SOMETHING TO STORE NUMBER VALUE!!!!
-function displayZero() {
-  display.textContent = 0;
-}
-function displayOne() {
-  display.textContent = 1;
-  displayValue = 1;
-}
-function displayTwo() {
-  display.textContent = 2;
-  displayValue = 2;
-}
-function displayThree() {
-  display.textContent = 3;
-}
-function displayFour() {
-  display.textContent = 4;
-}
-function displayFive() {
-  display.textContent = 5;
-}
-function displaySix() {
-  display.textContent = 6;
-}
-function displaySeven() {
-  display.textContent = 7;
-}
-function displayEight() {
-  display.textContent = 8;
-}
-function displayNine() {
-  display.textContent = 9;
-}
-function displayPlus() {
-  display.textContent = "+";
-}
-function displayMinus() {
-  display.textContent = "-";
-}
-function displayMultiply() {
-  display.textContent = "*";
-}
-function displayDivide() {
-  display.textContent = "/";
-}
-function displayClear() {
-  display.textContent = "";
-}
-
-console.log(displayValue);

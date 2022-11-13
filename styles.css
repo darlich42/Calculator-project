@@ -25,21 +25,31 @@ body {
 
 .display {
   background-color: rgba(255, 255, 255, 0.5);
-  font-family: American Typewriter, serif;
+
   padding: 20px;
-  font-size: 40px;
+
   text-align: right;
   border-radius: 20px;
   margin: 5px;
   width: 260px;
   height: 40px;
   box-shadow: 1px 1px 5px rgb(118, 118, 118);
+  display: flex;
+  flex-direction: column;
 }
 
-.calc-button {
+.current {
+  font-family: American Typewriter, serif;
+  font-size: 40px;
+}
+.previous {
+  font-family: American Typewriter, serif;
+  font-size: 20px;
+}
+
+.calc-btn {
   font-family: American Typewriter, serif;
   background-color: #edcbd2;
-
   padding: 20px;
   margin: 5px;
   font-size: 30px;
@@ -48,16 +58,16 @@ body {
   box-shadow: 1px 1px 5px rgb(118, 118, 118);
 }
 
-.calc-button:hover {
+.calc-btn:hover {
   background-color: #f7d3da;
   cursor: pointer;
 }
 
-.calc-button:active {
+.calc-btn:active {
   background-color: #cbabb2;
 }
 
-.calc-button.operator {
+.operator {
   font-family: American Typewriter, serif;
   background-color: #99e8da;
   padding: 20px;
@@ -67,10 +77,31 @@ body {
   border-radius: 30px;
 }
 
-.calc-button.operator:hover {
-  background-color: #9ceedf;
+.operator:hover {
+  background-color: #9ef1e2;
 }
 
-.calc-button.operator:active {
+.operator:active {
+  background-color: #8cd7c9;
+}
+
+.clear-btn,
+.equals {
+  font-family: American Typewriter, serif;
+  background-color: #99e8da;
+  padding: 20px;
+  margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.clear-btn:hover,
+.equals:hover {
+  background-color: #9ef1e2;
+}
+
+.clear-btn:active,
+.equals:active {
   background-color: #8cd7c9;
 }
